@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown("a")){
             projSpeed += 1;
         }
-        if(Input.GetKeyDown("a")){
+        if(Input.GetKeyDown("z")){
             projSpeed -= 1;
         }
         if(Input.GetMouseButtonDown(0)) {
