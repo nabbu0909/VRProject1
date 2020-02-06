@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public float speedIncrement;
     public GameObject player;
     public GameObject ProjPrefab;
     public GameObject Proj;
@@ -14,17 +15,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown("e")){
-            projSpeed += 1;
+            projSpeed += speedIncrement;
         }
         if(Input.GetKeyDown("q")){
-            projSpeed -= 1;
+            projSpeed -= speedIncrement;
         }
         if(Input.GetMouseButtonDown(0)) {
             Proj = Instantiate<GameObject>(ProjPrefab);
