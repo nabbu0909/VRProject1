@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         }
         if(Input.GetMouseButtonDown(0)) {
             Proj = Instantiate<GameObject>(ProjPrefab);
-            Proj.transform.position = player.transform.position + Camera.main.transform.forward * 2;
+            Proj.transform.position = player.transform.position + Camera.main.transform.forward;
             Rigidbody rb = Proj.GetComponent<Rigidbody>();
             rb.velocity = Camera.main.transform.forward * projSpeed;
         }
