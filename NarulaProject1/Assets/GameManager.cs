@@ -20,10 +20,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("a")){
+        if(Input.GetKeyDown("e")){
             projSpeed += 1;
         }
-        if(Input.GetKeyDown("z")){
+        if(Input.GetKeyDown("q")){
             projSpeed -= 1;
         }
         if(Input.GetMouseButtonDown(0)) {
