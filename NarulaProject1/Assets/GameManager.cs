@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Button exitText;
     public float speedIncrement;
     public GameObject player;
     public GameObject ProjPrefab;
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        exitText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,11 +29,20 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown("q")){
             projSpeed -= speedIncrement;
         }
-        if(Input.GetMouseButtonDown(0)) {
+        if(Input.GetMouseButtonDown(0) && !exitText.IsActive()) {
             Proj = Instantiate<GameObject>(ProjPrefab);
             Proj.transform.position = player.transform.position + Camera.main.transform.forward;
             Rigidbody rb = Proj.GetComponent<Rigidbody>();
             rb.velocity = Camera.main.transform.forward * projSpeed;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape) && exitText.IsActive()) {
+            Cursor.lockState = CursorLockMode.Locked;
+            exitText.gameObject.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape)) {
+            Cursor.lockState = CursorLockMode.Confined;
+            exitText.gameObject.SetActive(true);
         }
         counter.text = "Throw Speed: " + projSpeed;
     }
