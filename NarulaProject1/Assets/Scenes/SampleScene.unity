@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe38576be4144d469f57a12851292aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floor: {fileID: 2375307899467903832, guid: 7c81b83e362f05641a95bf100b51856d, type: 3}
+  fireSound: {fileID: 0}
 --- !u!1 &697011591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,6 +1287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f82e9cb8aeeb541ab212b8c7c0ab54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointSound: {fileID: 8300000, guid: a9920b69e57039f47b281af56b3565b3, type: 3}
   goal: {fileID: 183129619}
   score: {fileID: 873301202}
   pointsMade: 0
@@ -2245,7 +2246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe38576be4144d469f57a12851292aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floor: {fileID: 0}
+  fireSound: {fileID: 0}
 --- !u!4 &8473754625991512513
 Transform:
   m_ObjectHideFlags: 0

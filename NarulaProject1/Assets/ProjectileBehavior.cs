@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class ProjectileBehavior : MonoBehaviour
 {
-    public GameObject floor;
+    public AudioClip fireSound;
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioSource.PlayClipAtPoint(fireSound, transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    void OnCollisionEnter(Collision collision){
-        if (collision.gameObject == floor){
-            Destroy(collision.gameObject);
-        }
     }
 }
