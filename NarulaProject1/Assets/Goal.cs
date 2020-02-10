@@ -18,13 +18,16 @@ public class Goal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //score text
         score.text = "Score: " + pointsMade;
     }
     private void OnTriggerEnter(Collider other)
     {
+        //update score when point made
         pointsMade++;
         AudioSource.PlayClipAtPoint(pointSound, transform.position);
         Destroy(other.gameObject);
+        //reset goal to random location
         goal.position = new Vector3(Random.Range(-50.0f, 50.0f), -0.3f, Random.Range(-50.0f, 50.0f));
     }
 }

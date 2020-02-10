@@ -8,6 +8,7 @@ public class ProjectileBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //fire ball sound
         AudioSource.PlayClipAtPoint(fireSound, transform.position);
     }
 
